@@ -1,4 +1,4 @@
-package de.damian.metrics;
+package de.roaring20s.metrics;
 
 import org.bukkit.Bukkit;
 import org.bukkit.World;
