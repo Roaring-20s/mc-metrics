@@ -1,0 +1,8 @@
+# ServerMetrics - Configuration
+target_url: "http://127.0.0.1:5000/push"
+server_id: "servername"
+send_interval_seconds: 10
+auth_token: "CHANGE_THIS_TOKEN"
+connect_timeout_seconds: 3
+request_timeout_seconds: 5
+debug_logging: false

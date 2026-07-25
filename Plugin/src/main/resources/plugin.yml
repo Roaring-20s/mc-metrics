@@ -1,0 +1,7 @@
+name: MC-Metrics
+version: '1.0.7'
+main: de.damian.metrics.ServerMetricsPlugin
+api-version: '1.20'
+author: Damian
+description: Collects server/system metrics and sends them via HTTP POST (JSON) to a central collection server.
+folia-supported: false
