@@ -70,6 +70,8 @@ public final class ServerMetricsPlugin extends JavaPlugin {
                 intervalTicks
         ).getTaskId();
 
+        getCommand("mcmetrics").setExecutor(new ReloadCommand(this));
+
         getLogger().info("ServerMetrics v" + pluginVersion + " enabled. Target: " + targetUrl
                 + " | server_id=" + serverId
                 + " | interval=" + sendIntervalSeconds + "s");
@@ -91,6 +93,20 @@ public final class ServerMetricsPlugin extends JavaPlugin {
         this.authToken = cfg.getString("auth_token", "");
         this.sendIntervalSeconds = Math.max(1, cfg.getLong("send_interval_seconds", 10));
         this.debugLogging = cfg.getBoolean("debug_logging", false);
+    }
+
+    public void restartScheduler() {
+        if (taskId != -1) {
+            getServer().getScheduler().cancelTask(taskId);
+        }
+
+        long intervalTicks = sendIntervalSeconds * 20L;
+        this.taskId = getServer().getScheduler().runTaskTimerAsynchronously(
+                this,
+                this::collectAndSendMetrics,
+                intervalTicks,
+                intervalTicks
+        ).getTaskId();
     }
 
     private void loadPluginVersion() {

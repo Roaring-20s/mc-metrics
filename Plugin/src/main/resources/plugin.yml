@@ -5,3 +5,14 @@ api-version: '1.20'
 author: Damian31101, Roaring20s
 description: Collects server/system metrics and sends them via HTTP POST (JSON) to a central collection server.
 folia-supported: false
+
+commands:
+  mcmetrics:
+    description: Reload the MC-Metrics configuration
+    usage: /mcmetrics reload
+    permission: mcmetrics.reload
+
+permissions:
+  mcmetrics.reload:
+    description: Allows reloading the MC-Metrics configuration
+    default: op
