@@ -1,3 +1,4 @@
+[![Build and Push Docker Image](https://github.com/Roaring-20s/mc-metrics/actions/workflows/docker-publish.yml/badge.svg?event=release)](https://github.com/Roaring-20s/mc-metrics/actions/workflows/docker-publish.yml)
 # Minecraft Metrics
 ### Roaring 20s Metrics Collection System
 
