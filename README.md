@@ -71,7 +71,22 @@ graph LR
 
 #### Option 1: Docker (Recommended)
 
-1. **Build and run with Docker Compose**:
+**Using pre-built image from GitHub Container Registry**:
+
+```bash
+docker pull ghcr.io/roaring-20s/mc-metrics-server:latest
+```
+
+Then run with environment variables:
+```bash
+docker run -d \
+  -p 5000:5000 \
+  -e SECRET_TOKEN="your-secret-token" \
+  -e PORT="5000" \
+  ghcr.io/roaring-20s/mc-metrics-server:latest
+```
+
+**Or build and run with Docker Compose**:
    ```bash
    cd Server
    docker-compose up -d
