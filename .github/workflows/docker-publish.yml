@@ -2,9 +2,7 @@ name: Build and Push Docker Image
 
 on:
   release:
-    types: [published]
-  push:
-    branches: [ "main" ]
+    types: [published] # Triggert NUR, wenn du auf GitHub ein Release veröffentlichst
 
 jobs:
   build-and-push:
@@ -31,7 +29,7 @@ jobs:
           images: ghcr.io/${{ github.repository_owner }}/mc-metrics-server
           tags: |
             type=semver,pattern={{version}}
-            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            type=raw,value=latest
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
