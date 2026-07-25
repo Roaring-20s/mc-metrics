@@ -59,7 +59,7 @@ graph LR
    ```
 
 2. **Install the plugin**:
-   - Copy `target/MC-Metrics-1.0.7.jar` to your Minecraft server's `plugins/` directory
+   - Copy `target/MC-Metrics-1.x.x.jar` to your Minecraft server's `plugins/` directory
    - Restart the server or load the plugin
 
 3. **Configure the plugin**:

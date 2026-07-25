@@ -11,7 +11,7 @@ Receives metrics from Minecraft plugins.
 ```json
 {
   "server_id": "servername",
-  "version": "1.0.7",
+  "version": "1.x.x",
   "tps": 20.0,
   "mspt": 12.5,
   "cpu_load": 45.3,

@@ -1,5 +1,5 @@
 name: MC-Metrics
-version: '1.0.7'
+version: '1.0.8'
 main: de.roaring20s.metrics.ServerMetricsPlugin
 api-version: '1.20'
 author: Damian31101, Roaring20s
