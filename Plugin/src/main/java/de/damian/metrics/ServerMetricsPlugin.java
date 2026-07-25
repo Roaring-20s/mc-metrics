@@ -86,7 +86,7 @@ public final class ServerMetricsPlugin extends JavaPlugin {
         getLogger().info("ServerMetrics disabled.");
     }
 
-    private void loadConfigValues() {
+    public void loadConfigValues() {
         FileConfiguration cfg = getConfig();
         this.targetUrl = cfg.getString("target_url", "http://127.0.0.1:5000/push");
         this.serverId = cfg.getString("server_id", "srv1");
